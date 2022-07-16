@@ -1,0 +1,10 @@
+body {
+    background-color: #F5F2F2
+    }
+p   {
+    margin-top: 0;
+    }
+.column_section {
+    column-count: 3;
+    column-width: 200px;
+    }
