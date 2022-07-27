@@ -74,4 +74,30 @@ function myFunction() {
   console.log(x.toExponential(2));
   console.log(x.toPrecision(6));
 
+// Task 3
+  let now = new Date(Date.now());
+  console.log('the current time is ' + now.toDateString());
 
+  console.log(now.getDay());
+  console.log(now.getDate());
+  console.log(now.getMonth());
+  console.log(now.getFullYear());
+  console.log(now.getHours());
+  console.log(now.getMinutes());
+
+//   now.setDate(10);
+//   console.log(now.getDate());
+
+  let newDate = new Date();
+  setTimeout(() => {
+    newDate = Date.now();
+    console.log(newDate - now);
+  }, 1000);
+
+//   let birthday = new Date(1985, 4, 11, 13, 15, 30);
+//   console.log(birthday);
+  let birthday = new Date(85, 3, 11, 13, 15, 30);
+  console.log(birthday);
+
+  let d = new Date(10000000000000)
+  console.log(d);
