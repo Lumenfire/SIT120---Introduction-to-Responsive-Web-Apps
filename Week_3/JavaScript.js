@@ -26,6 +26,8 @@ function myFunction() {
     console.log(meal);
   }
 
+  //Task 2
+
   let fruits = ['Apple', 'Pear', 'Watermelon', 'Strawberry'];
   console.log(fruits);
   console.log(fruits.find((fruit) => fruit === 'Pear'));
