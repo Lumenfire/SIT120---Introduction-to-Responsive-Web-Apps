@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SIT120 Week 6 </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="./vue.js"></script>
+    </head>
+    <body>
+       <div id="app">
+            <p>User name</p>
+            <input
+            v-model="name"
+            type="text"
+            placeholder="Please enter your user name"
+            />
+            <p> User Name: {{ name }}</p>
+
+            <p>Password</p>
+            <input v-model="password" type="password" placeholder="Please enter password"/>
+            <p> Password: {{ password }}</p>
+
+            <p>Email Address</p>
+            <input v-model="email" type="email" placeholder="Please input email address here"/>
+            <p> User email: {{ email }}</p>
+
+            <p>Date of Birth</p>
+            <input v-model="dob" type="date" placeholder="Please enter date of birth"/>
+            <p> Date of Birth: {{ dob }}</p>
+
+            <p>Number of tickets</p>
+            <input v-model="tickets" type="number" />
+            <p> Tickets: {{ tickets }}</p>
+
+            <p>Menu items</p>
+            <input type="checkbox" id="entree" value="entree" v-model="menuSelection"/>
+            <label for="entree">Entree</label>
+            <input type="checkbox" id="main" value="main" v-model="menuSelection"/>
+            <label for="main">Main</label>
+            <input type="checkbox" id="dessert" value="dessert" v-model="menuSelection"/>
+            <label for="dessert">Dessert</label>
+            <br>
+            <span>Menu Selection: {{ menuSelection }}</span>
+
+            <p>Session times</p>
+            <select v-model="selected">
+                <option value="">Please select one</option>
+                <option value="Friday 1pm">Friday 1pm</option>
+                <option value="Friday 7pm">Friday 7pm</option>
+                <option value="Saturday 1pm">Saturday 1pm</option>
+                <option value="Saturday 7pm">Saturday 7pm</option>
+            </select>
+            <br>
+            <span> Session selected: {{selected}}</span>
+
+            <p>Reservation length</p>
+            <select v-model="reservation">
+                <option value="">Please select one</option>
+                <option v-for="n in 4">{{n}}</option>
+            </select>
+            <br>
+            <span> Reservation length: {{reservation}} hours</span>
+       </div>
+    </body>
+</html>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            name: '',
+            password: '',
+            email: '',
+            dob: '',
+            tickets: '',
+            menuSelection: [],
+            selected: '',
+            reservation: '',
+        },
+    });
+</script>
